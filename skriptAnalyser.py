@@ -41,6 +41,10 @@ def analyse(data: list):
         rawspeech = " ".join(cleansample.tolist())
         proc = nlp(rawspeech)
         attrList = attrSep(proc)
-        scaledattr = [((attrList[x] - mind[x])/(maxd[x] - mind[x])) for x in range(5)]
+        scaledattr = [max(0.1, ((attrList[x] - mind[x])/(maxd[x] - mind[x]))) for x in range(5)]
         reslist.append(scaledattr)
     return reslist
+
+if __name__ == '__main__':
+    text = input()
+    print(analyse([text]))
