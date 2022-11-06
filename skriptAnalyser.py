@@ -59,7 +59,7 @@ def analyse(data: list) -> list:
         # the actual similarity analysis function
         attrList = attrSep(proc)
         # scaler with a mix of normalization and reLU, because sigmoid messed with variance too much.
-        scaledattr = [min(max(0.1, ((attrList[x] - mind[x+3])/(maxd[x+3] - mind[x+3]))), 1) for x in range(5)]
+        scaledattr = [min(max(0.01, ((attrList[x] - mind[x+3])/(maxd[x+3] - mind[x+3]))), 1) for x in range(5)]
         close = NearestNeighbour(attrList, matchData.loc[:, 'informative':'ceremonial'])
         # append result for speech in the final result list
         reslist.append(scaledattr + matchData.loc[close, 'title':'classification'].tolist())
