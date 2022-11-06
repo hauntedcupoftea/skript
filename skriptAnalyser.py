@@ -36,7 +36,7 @@ def attrSep(proc: spacy.tokens.doc.Doc) -> list:
     desc = proc.similarity(nlp('descriptive demonstration workshop'))
     entr = proc.similarity(nlp('entertaining witty engaging'))
     cerm = proc.similarity(nlp('occasion ceremony tribute'))
-    return np.power([info, pers, desc, entr, cerm], 2).tolist()
+    return [info, pers, desc, entr, cerm]
 
 def NearestNeighbour(node, nodes):
     # using the euclidean distance to find nearest dataset member
@@ -62,7 +62,7 @@ def analyse(data: list) -> list:
         scaledattr = [min(max(0.01, ((attrList[x] - mind[x+3])/(maxd[x+3] - mind[x+3]))), 1) for x in range(5)]
         close = NearestNeighbour(attrList, matchData.loc[:, 'informative':'ceremonial'])
         # append result for speech in the final result list
-        reslist.append(scaledattr + matchData.loc[close, 'title':'classification'].tolist())
+        reslist.append(np.power(scaledattr, 2).tolist() + matchData.loc[close, 'title':'classification'].tolist())
 
     return reslist
 
