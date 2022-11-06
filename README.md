@@ -1,7 +1,7 @@
 
 # *skript*
 
-A repository for a Probability and Statistics Hackathon conducted at Bennett University during 5-6th November, 2022.
+A project for a Probability and Statistics Hackathon conducted at Bennett University during 5-6th November, 2022. Created by Team Number 16 at the hackathon itself, consisting of members Aayush Gupta, Anand Chauhan, and Vasu Jain. The entire project was developed from scratch over the course of 18 hours.
 
 ## `IDEA`
 
@@ -29,7 +29,7 @@ All the work on the dataset was done with Vasu Jain, while all the statistics an
 
 ## `PRESENTATION AND USAGE`
 
-The working part of the project only requires three files - 
+The working part of the project only requires three files -
 
 - [The custom dataset](defdata.csv)
 - [The Analyser file](skriptAnalyser.py)
@@ -37,5 +37,13 @@ The working part of the project only requires three files -
 
 The UI file uses [Google colaboratory](https://colab.research.google.com/notebooks/widgets.ipynb) widgets created by Aayush Gupta. As such, the UI side of the project will only work on google colaboratory. If you wish to run the project like that, go into a session, open the UI file, then upload the analyser file and the dataset seperately. You will also need to install the specific model of spacy used for the project, but the UI file already has a script for that.
 
+The UI itself is fairly intuitive and user-friendly, and will provide the output in the form of spider charts. Multiple inputs can be plotted at once, although comparison betweent them has not been automated just yet.
+
 Otherwise, only the analyser file and the dataset can be used as modules to be added to a project. Bear in mind however, that the analyser file accepts input as a `python list` only. even if the input is just one text file, it must be wrapped in a list first.
 
+## `THE OTHER FILES`
+
+Some information about the other files:
+
+- [Experimentation Notebook](skriptExperimentation.ipynb): This file contains all the ramblings and experimentation done over the course of the entire project. it also contains the code that converted our raw speech dataset into the plotting dataset we could use for comparison.
+- [Sample](sample.txt): A basic sample speech used to get familiar with the workings of all the libraries, as a vision for what the final project would look like was devised.
