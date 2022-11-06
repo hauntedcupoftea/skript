@@ -36,7 +36,7 @@ def attrSep(proc: spacy.tokens.doc.Doc) -> list:
     desc = proc.similarity(nlp('descriptive demonstration workshop'))
     entr = proc.similarity(nlp('entertaining witty engaging'))
     cerm = proc.similarity(nlp('occasion ceremony tribute'))
-    return [info, pers, desc, entr, cerm]
+    return np.power([info, pers, desc, entr, cerm], 2).tolist()
 
 def NearestNeighbour(node, nodes):
     # using the euclidean distance to find nearest dataset member
