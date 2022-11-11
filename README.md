@@ -59,3 +59,7 @@ Some information about the other files:
 
 - [Experimentation Notebook](skriptExperimentation.ipynb): This file contains all the ramblings and experimentation done over the course of the entire project. it also contains the code that converted our raw speech dataset into the plotting dataset we could use for comparison.
 - [Sample](sample.txt): A basic sample speech used to get familiar with the workings of all the libraries, as a vision for what the final project would look like was devised.
+
+#### CREDITS
+
+Everything in this document and repository is the original work of Anand Chauhan, Aayush Gupta, and Vasu Jain. The three collaborators on this repository page. The speeches used in the dataset were sourced from various online sources.
