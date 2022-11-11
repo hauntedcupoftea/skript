@@ -33,13 +33,25 @@ The working part of the project only requires three files -
 
 - [The custom dataset](defdata.csv)
 - [The Analyser file](skriptAnalyser.py)
-- [The UI file](placeholderURL) (file needed)
+- [The UI file](UI.ipynb)
 
 The UI file uses [Google colaboratory](https://colab.research.google.com/notebooks/widgets.ipynb) widgets created by Aayush Gupta. As such, the UI side of the project will only work on google colaboratory. If you wish to run the project like that, go into a session, open the UI file, then upload the analyser file and the dataset seperately. You will also need to install the specific model of spacy used for the project, but the UI file already has a script for that.
 
 The UI itself is fairly intuitive and user-friendly, and will provide the output in the form of spider charts. Multiple inputs can be plotted at once, although comparison betweent them has not been automated just yet.
 
 Otherwise, only the analyser file and the dataset can be used as modules to be added to a project. Bear in mind however, that the analyser file accepts input as a `python list` only. even if the input is just one text file, it must be wrapped in a list first.
+
+## `THE UI`
+
+Some UI screenshots are given below. The project uses `ipywidgets` to create them, since it saves a lot on time and effort needed that would otherwise have gone into making a flash backend or a Tkinter native UI.
+
+### Screenshots
+
+![Welcome Screen](assets/welcome.png)
+
+![The Main Menu](assets/starting.png)
+
+![A Sample Result](assets/sampleProject.png)
 
 ## `THE OTHER FILES`
 
